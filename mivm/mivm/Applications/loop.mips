@@ -1,0 +1,10 @@
+section .data
+    decrement .word 1
+    counter .word 5
+    string .byte 104, 101, 108, 108, 111, 33, 10, 0
+section .code
+    lw $1, decrement
+    lw $2, counter
+    sub $2, $2, $1
+    ptr_asciiz string
+    bne $2, $0, -2

@@ -1,0 +1,14 @@
+section .data
+    bites .byte 10
+    halfs .byte -20
+    fulls .word 30
+    receiver .word 0
+    part .word 0
+section .code
+    lb $1, bites
+    lb $2, halfs
+    lw $3, fulls
+    add $4, $1, $2
+    add $4, $4, $3
+    sw $4, part
+    ptr_int 4, part

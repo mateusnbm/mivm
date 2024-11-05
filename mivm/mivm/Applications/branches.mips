@@ -1,0 +1,12 @@
+section .data
+    nu1 .byte 0
+    nu2 .byte 1
+    put .byte 0
+    str .byte 104, 101, 108, 108, 111, 33, 10, 0
+section .code
+    lb $1, nu1
+    beq $1, $0, 1
+    lb $1, nu2
+    beq $1, $0, -1
+    sb $1, put
+    ptr_int 1, put
